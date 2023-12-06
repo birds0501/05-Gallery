@@ -15,6 +15,9 @@ li {
 
 body {
   font: 1rem/1.6 "Pretendard", sans-serif;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
 }
 
 a {
@@ -35,6 +38,7 @@ a:hover {
   right: 0;
   background: rgba(0, 0, 0, 0.7);
   display: none; /* jquery fade in/ out */
+  backdrop-filter: blur(5px);
 }
 
 .video-wrap {
@@ -48,6 +52,7 @@ a:hover {
   opacity: 0;
   transition: 0.3s;
   pointer-events: none;
+  z-index: 10;
 }
 
 .video-wrap.active {
@@ -97,8 +102,10 @@ a:hover {
 
 .video-list li {
   border: 5px solid #000;
+  color: #fff;
   padding: 50px;
   font-weight: 700;
   cursor: pointer;
+  filter: grayscale(1);
   /* font-size: 1.3rem; */
 }
