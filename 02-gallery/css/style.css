@@ -15,6 +15,14 @@ li {
 
 img {
   vertical-align: top;
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16/9; /* 동영상 지정 비율 16/9 */
+  border: none;
+  vertical-align: top;
 }
 
 body {
@@ -36,7 +44,7 @@ body {
   position: fixed;
   top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%) skewY(10deg);
+  transform: translate(-50%, -50%) skewY(20deg);
   border: 10px solid #000;
   background: #fff;
 
@@ -44,8 +52,8 @@ body {
   opacity: 0;
   transition: 0.35s cubic-bezier(0, 0.3, 0, 1.17);
   pointer-events: none; /* 팝업에 가려지지 마라 */
-  /* test
-  width: 800px;
+
+  /* width: 800px;
   height: 600px; */
 }
 
@@ -54,6 +62,12 @@ body {
   top: 50%;
   transform: translate(-50%, -50%) skewY(0deg);
   pointer-events: auto; /* 팝업에 가려져라 */
+}
+
+.title {
+  text-align: center;
+  color: #f39;
+  padding: 10px;
 }
 
 .btn-close {
