@@ -1,0 +1,91 @@
+@charset 'utf-8';
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  font: 1em/1.6 Pretendard, sans-serif;
+}
+
+.dim {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(7px);
+  display: none; /* jQuery: fade in 사용 예정 */
+}
+
+.popup {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%) skewY(10deg);
+  border: 10px solid #000;
+  background: #fff;
+
+  /* jQuery: addClass()사용 예정 */
+  opacity: 0;
+  transition: 0.35s cubic-bezier(0, 0.3, 0, 1.17);
+  pointer-events: none; /* 팝업에 가려지지 마라 */
+  /* test
+  width: 800px;
+  height: 600px; */
+}
+
+.popup.active {
+  opacity: 1;
+  top: 50%;
+  transform: translate(-50%, -50%) skewY(0deg);
+  pointer-events: auto; /* 팝업에 가려져라 */
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: -57px;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.wrap {
+  width: 70%;
+  margin: 50px auto;
+  padding: 20px;
+  border: 10px solid #eee;
+}
+
+/* masonry layout */
+.gallery-list {
+  column-count: 4; /* 4개의 기둥을 쓰자(가로로 4개 배치하겠다) */
+  column-gap: 10px;
+}
+
+.gallery-list li {
+  display: inline-block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.gallery-list li img {
+  width: 100%;
+}
